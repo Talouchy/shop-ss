@@ -12,7 +12,6 @@ module.exports = function(app)
   app.get( '/admin/user/:id', function(req, res) {
     User.find({_id: req.params.id}, function(err, data){
       if(err) throw err;
-      console.log(data);
       res.render('admin/user-profile', {user: data});
     });
   });
