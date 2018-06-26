@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+
+    <link rel="stylesheet" href="/assets/style.css" type="text/css">
+  </head>
+  <body>
+    <h2>User list</h2>
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Reqistration Date</th>
+    </tr>
+    <% for(var i = 0; i < users.length; i++) { %>
+    <tr>
+      <td><%= users[i].firstName %></td>
+      <td><%= users[i].lastName %></td>
+      <td><%= users[i].email %></td>
+      <td><%= users[i].regDate %></td>
+      <td>
+        <a href="/admin/user/<%= users[i]._id %>" >Profile</a>
+      </td>
+    </tr>
+    <% } %>
+  </table>
+</div>
+  </body>
+</html>
